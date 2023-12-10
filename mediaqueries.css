@@ -1,0 +1,108 @@
+@media screen and (max-width: 1200px) {
+  body {
+    padding: 0;
+  }
+
+  .desktop-nav {
+    display: none;
+  }
+
+  .hamburger-nav {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .container {
+    box-sizing: border-box;
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 5fr 5fr;
+    grid-template-areas:
+      "nav"
+      "info"
+      "image";
+  }
+
+  .about-info {
+    text-align: center;
+    margin: 0;
+  }
+
+  .about-img {
+    margin: 0;
+    margin: 0 0 5rem 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .skills {
+    display: grid;
+  }
+
+  .skills-list {
+    flex-wrap: wrap;
+  }
+
+  .projects {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "projects-header"
+      "project-1"
+      "description-1"
+      "project-2"
+      "description-2";
+  }
+
+  .project-img {
+    height: 10rem;
+    width: 18rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  #about-section {
+    height: 100svh;
+  }
+
+  #skills-section,
+  #projects-section,
+  #contact-section {
+    height: 100lvh;
+  }
+
+  .hamburger-menu {
+    margin-right: 1rem;
+  }
+
+  .about-img {
+    margin: 0;
+  }
+
+  .contact-info {
+    font-size: 1rem;
+    gap: .75rem;
+    width: 22.5rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .portrait {
+    height: 12rem;
+    width: 12rem;
+  }
+}
+
+@media screen and (orientation: landscape) and (max-width: 800px) {
+  .about,
+  .skills,
+  .projects,
+  .contact {
+    height: 200svh;
+    width: 100svw;
+  }
+}
