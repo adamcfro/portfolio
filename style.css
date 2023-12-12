@@ -4,7 +4,7 @@
   --gray: #F6F6F6;
   --dark-gray: #D8D8D8;
   --red: #FF0000;
-  --orange: #FF5003;
+  --orange: #F45B00;
   --blue: #002347;
 
   --linear-gradient-right: linear-gradient(to bottom right, var(--dark-gray), var(--white));
@@ -28,10 +28,6 @@ body {
   color: var(--blue);
 }
 
-a {
-  transition: all 300ms ease;
-}
-
 nav {
   display: flex;
   justify-content: space-around;
@@ -53,11 +49,18 @@ a {
   color: var(--black);
   text-decoration: none;
   text-decoration-color: var(--white);
+  transition: all 300ms ease;
 }
 
 a:link:hover {
   color: var(--orange);
   text-decoration-color: var(--orange);
+}
+
+a:hover,
+div a i:hover {
+  color: var(--orange);
+  transition: all 300ms ease;
 }
 
 i {
@@ -197,16 +200,10 @@ i {
 
 .description-1 {
   grid-area: description-1;
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
 }
 
 .description-2 {
   grid-area: description-2;
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
 }
 
 .contact {
@@ -231,43 +228,20 @@ i {
   border-radius: 1.5rem;
 }
 
-
-/* NAVIGATION NAVIGATION NAVIGATION */
-/* NAVIGATION NAVIGATION NAVIGATION */
-/* NAVIGATION NAVIGATION NAVIGATION */
-/* NAVIGATION NAVIGATION NAVIGATION */
-/* NAVIGATION NAVIGATION NAVIGATION */
-/* NAVIGATION NAVIGATION NAVIGATION */
-/* NAVIGATION NAVIGATION NAVIGATION */
-
 /* DESKTOP NAV */
 .desktop-nav {
   grid-area: nav;
   display: flex;
-  /* justify-content: center; */
-  /* justify-content: space-between; */
   top: 0;
   width: 100%;
-  /* padding: 1rem; */
-
 }
 
 .nav-links {
   display: flex;
   gap: 1rem;
   list-style: none;
-  /* gap: 10rem; */
-
   justify-content: space-around;
   width: 100%;
-}
-
-.logo {
-  font-size: 1.5rem;
-}
-
-.logo:hover {
-  cursor: default;
 }
 
 
