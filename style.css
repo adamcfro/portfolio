@@ -4,7 +4,7 @@
   --gray: #F6F6F6;
   --dark-gray: #D8D8D8;
   --red: #FF0000;
-  --orange: #F45B00;
+  --orange: #F55F20;
   --blue: #002347;
 
   --linear-gradient-right: linear-gradient(to bottom right, var(--dark-gray), var(--white));
@@ -105,7 +105,7 @@ i {
   height: 20rem;
   width: 20rem;
   border-radius: 10rem;
-  box-shadow: .2rem .2rem var(--dark-gray);
+  box-shadow: 0 .2rem .7rem rgb(0 0 0 / 0.2);
   object-fit: cover;
 }
 
@@ -184,11 +184,15 @@ i {
 }
 
 .project-img {
-  height: 15rem;
-  width: 27rem;
+  height: 14rem;
+  width: 26rem;
   border-radius: 2rem;
   object-fit: contain;
-  box-shadow: .2rem .2rem var(--dark-gray);
+  box-shadow: 0 .2rem .7rem rgb(0 0 0 / 0.2);
+}
+
+.project-img:hover {
+  box-shadow: 0 .4rem 1.4rem rgb(0 0 0 / 0.2);
 }
 
 .description {
@@ -243,7 +247,6 @@ i {
   justify-content: space-around;
   width: 100%;
 }
-
 
 /* HAMBURGER!!! */
 .hamburger-nav {
