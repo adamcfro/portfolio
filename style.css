@@ -96,6 +96,27 @@ i {
   gap: 2rem;
 }
 
+.about-info p {
+  opacity: 0;
+}
+
+.about-info p:nth-child(1) {
+  font-size: 2rem;
+  animation: fadeIn 1.5s ease-in-out forwards;
+  animation-delay: .5s;
+}
+
+.about-info p:nth-child(2) {
+  animation: fadeIn 1.5s ease-in-out forwards;
+  animation-delay: 1.5s;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
 .about-img {
   grid-area: image;
   margin-left: 3rem;
