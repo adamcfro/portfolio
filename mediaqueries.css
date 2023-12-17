@@ -45,21 +45,9 @@
     flex-wrap: wrap;
   }
 
-  .projects {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-areas:
-      "projects-header"
-      "project-1"
-      "description-1"
-      "project-2"
-      "description-2";
-  }
-
-  .project-img {
-    height: 10rem;
-    width: 18rem;
+  .project {
+    height: 17.5rem;
+    width: 100%;
   }
 }
 
@@ -80,6 +68,30 @@
 
   .about-img {
     margin: 0;
+  }
+
+  .project {
+    height: 15rem;
+    width: 100%;
+  }
+
+  .header {
+    margin-top: 2rem;
+  }
+
+  .skills-subheader {
+    align-items: center;
+  }
+  
+  .skills-info {
+    margin: 0 1rem;
+  }
+
+  .project-img {
+    height: 15rem;
+    width: 7.5rem;
+    object-fit: cover;
+    overflow: hidden;
   }
 
   .contact-info {
@@ -103,5 +115,9 @@
   .contact {
     height: 200svh;
     width: 100svw;
+  }
+
+  .project {
+    height: 12.5rem;
   }
 }
