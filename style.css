@@ -6,6 +6,8 @@
   --red: #FF0000;
   --orange: #F55F20;
   --blue: #002347;
+  --green: #46b96c;
+  --turqoise: #7efff5;
 
   --linear-gradient-right: linear-gradient(to bottom right, var(--dark-gray), var(--white));
   --linear-gradient-left: linear-gradient(to bottom left, var(--dark-gray), var(--white));
@@ -68,7 +70,36 @@ i {
   color: var(--blue);
 }
 
-.highlight {
+.highlight-1 {
+  animation: 1.5s highlightAnimation 1.5s 1 normal forwards;
+  background-color: none;
+  background: linear-gradient(90deg, var(--green) 50%, rgba(255, 255, 255, 0) 50%);
+  background-size: 200% 100%;
+  background-position: 100% 0;
+}
+  
+@-webkit-keyframes highlightAnimation {
+  to {
+    background-position: 0 0;
+  }
+}
+
+@keyframes highlightAnimation {
+    from {
+        color: var(--blue);
+      }
+  to {
+    color: var(--white);
+    background-position: 0 0;
+  }
+}
+
+.highlight-2 {
+  color: var(--white);
+  background-color: var(--green);
+}
+
+.highlight-3 {
   color: var(--orange);
   display: contents;
 }
@@ -139,10 +170,9 @@ i {
 .skills {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 2fr 4fr 4fr 4fr;
+  grid-template-rows: 2fr 4fr 3fr 3fr;
   grid-template-areas:
-    "header"
-    "skills-subheader"
+    "skills-header"
     "skills-list"
     "skills-info"
     "education";
@@ -150,10 +180,11 @@ i {
   padding: 1rem;
   background-color: var(--gray);
   background: var(--linear-gradient-left);
+  position: relative;
 }
 
-.skills-subheader {
-  grid-area: skills-subheader;
+.skills-header {
+  grid-area: skills-header;
   display: flex;
   justify-content: center;
   align-items: end;
@@ -170,14 +201,14 @@ i {
 
 .skills-info {
   grid-area: skills-info;
-  display: flex;
-  align-items: center;
-  margin: 0 7.5rem;
-  opacity: 0;
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  margin: 0 17.5rem;
   animation-timing-function: ease-in-out;
   animation-direction: forwards;
   animation-delay: .5s;
-  animation-duration: 1.5s; 
+  animation-duration: 1.5s;
 }
 
 .education {
@@ -228,22 +259,22 @@ i {
   margin: auto;
   border-radius: .5rem;
   box-shadow: 0 .2rem .7rem rgb(0 0 0 / 0.2);
-  overflow: hidden;
-
   background-color: var(--gray);
+  overflow: hidden;
 }
 
 .project-img-div {
+  grid-area: project-img;
   max-height: 100%;
   max-width: 30rem;
   object-fit: contain;
-  grid-area: project-img;
 }
 
 .project-img {
   max-height: 100%;
   max-width: 30rem;
   object-fit: contain;
+  opacity: .7;
 }
 
 .description {
@@ -277,31 +308,60 @@ i {
   grid-area: project-2;
 }
 
-
-/* .project:hover {
-  box-shadow: 0 .4rem 1.4rem rgb(0 0 0 / 0.2);
-} */
+.project-links a:hover {
+  box-shadow: 0 .1rem .4rem rgb(0 0 0 / 0.2);
+}
 
 .contact {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 3fr 1fr 3fr;
+  grid-template-areas:
+    "contact-me"
+    "contact"
+    "get-in-touch";
   height: 100svh;
+  padding: 1rem;
   gap: 1rem;
-  background-color: var(--gray);
   background: var(--linear-gradient-left);
 }
 
+.contact-me {
+  grid-area: contact-me;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+
 .contact-info {
+  grid-area: contact;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 5rem;
   width: 25rem;
-  gap: 1rem;
   border: .1rem solid var(--blue);
   border-radius: 1.5rem;
+  margin: 0 auto;
+  gap: 1rem;
+}
+
+.get-in-touch {
+  grid-area: get-in-touch;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+.arrow {
+  display: block;
+  height: 100px;
+  width: 100px;
+  margin-top: 2rem;
+  margin-left: 3rem;
+  object-fit: contain;
+  transform: rotate(90deg);
 }
 
 /* DESKTOP NAV */
