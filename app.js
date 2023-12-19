@@ -46,7 +46,7 @@ function addHighlightToProjects() {
  * Removes scroll event listener and adds an arrow to contact section. Also
  * highlights "Get in Touch".
  */
-function addArrowAndHighlight() {
+function addArrow() {
   const viewportWidth = Math.max(
     document.documentElement.clientWidth,
     window.innerWidth || 0
@@ -56,15 +56,13 @@ function addArrowAndHighlight() {
     document.documentElement.scrollTop >= 2600 ||
     (viewportWidth < 651 && document.documentElement.scrollTop >= 2000)
   ) {
-    window.removeEventListener("scroll", addArrowAndHighlight);
+    window.removeEventListener("scroll", addArrow);
 
     const img = document.createElement("img");
     img.setAttribute("src", "img/arrow.gif");
     img.setAttribute("alt", "arrow");
     img.classList.add("arrow");
     document.querySelector(".get-in-touch").appendChild(img);
-
-    document.querySelector(".get-in-touch p").classList.add("highlight-1");
   }
 }
 
@@ -85,7 +83,7 @@ function startApp() {
 
   document.addEventListener("scroll", addHighlightToProjects);
 
-  window.addEventListener("scroll", addArrowAndHighlight);
+  window.addEventListener("scroll", addArrow);
 }
 
 startApp();
