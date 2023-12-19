@@ -10,6 +10,10 @@
   .hamburger-nav {
     display: flex;
   }
+
+  .skills-info {
+    margin: 0 10rem;
+  }
 }
 
 @media screen and (max-width: 900px) {
@@ -43,6 +47,10 @@
 
   .skills-list {
     flex-wrap: wrap;
+  }
+
+  .skills-info {
+    margin: 0 5rem;
   }
 
   .project {
