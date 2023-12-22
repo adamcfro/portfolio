@@ -1,3 +1,9 @@
+@media screen and (max-width: 1400px) {
+  .skills-info {
+    margin: 0 15rem;
+  }
+}
+
 @media screen and (max-width: 1200px) {
   body {
     padding: 0;
@@ -9,6 +15,10 @@
 
   .hamburger-nav {
     display: flex;
+  }
+
+  .about-info p {
+    margin: 0 5rem;
   }
 
   .skills-info {
@@ -35,6 +45,10 @@
     margin: 0;
   }
 
+  .about-info p {
+    margin: 0 2rem;
+  }
+
   .about-img {
     margin: 0;
     display: flex;
@@ -53,20 +67,20 @@
     margin: 0 5rem;
   }
 
-  .project {
+  .project-div {
     height: 17.5rem;
     width: 100%;
   }
 }
 
 @media screen and (max-width: 650px) {
-  #about-section {
+  .about {
     height: 100svh;
   }
 
-  #skills-section,
-  #projects-section,
-  #contact-section {
+  .skills,
+  .projects,
+  .contact {
     height: 100lvh;
   }
 
@@ -78,16 +92,17 @@
     margin: 0;
   }
 
-  .project {
+  .project-div {
     height: 15rem;
     width: 100%;
   }
 
-  .header {
+  .projects-header {
     margin-top: 2rem;
+    font-size: 1.2rem;
   }
 
-  .skills-subheader {
+  .skills-header {
     align-items: center;
   }
   
@@ -104,13 +119,17 @@
 
   .contact-info {
     font-size: 1rem;
-    gap: .75rem;
+    gap: 1.75rem;
     width: 22.5rem;
+  }
+
+  .footer-links {
+    gap: 1rem;
   }
 }
 
 @media screen and (max-width: 400px) {
-  .portrait {
+  .about-portrait {
     height: 12rem;
     width: 12rem;
   }
@@ -125,7 +144,7 @@
     width: 100svw;
   }
 
-  .project {
+  .project-div {
     height: 12.5rem;
   }
 }
