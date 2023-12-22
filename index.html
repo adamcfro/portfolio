@@ -33,12 +33,15 @@
     <div class="container">
       <section id="about-section" class="about">
         <nav class="desktop-nav">
-          <ul class="nav-links">
-            <li><a href="#about-section" class="highlight-3">About</a></li>
-            <li><a href="#skills-section">Skills</a></li>
-            <li><a href="#projects-section">Projects</a></li>
-            <li><a href="#contact-section">Contact</a></li>
-          </ul>
+          <div class="name">ADAM FROEHLICH</div>
+          <div>
+            <ul class="nav-links">
+              <li><a href="#about-section">About</a></li>
+              <li><a href="#skills-section">Skills</a></li>
+              <li><a href="#projects-section">Projects</a></li>
+              <li><a href="#contact-section">Contact</a></li>
+            </ul>
+          </div>
         </nav>
         <nav class="hamburger-nav">
           <div class="hamburger-menu">
@@ -56,13 +59,17 @@
           </div>
         </nav>
         <div class="about-info">
-          <p>Hi, I'm Adam Froehlich</p>
+          <h1 class="about-header">
+            Hi! I'm Adam, a <span class="green-highlight">developer</span> based
+            in San Francisco.
+          </h1>
           <p>
-            I'm a
-            <span class="highlight-3">frontend developer</span> who loves to
-            learn new technologies!
+            I love
+            <span class="pink-highlight">building</span> tools that are
+            user-friendly, <span class="turqoise-highlight">simple</span> and
+            <span class="yellow-highlight">delightful.</span>
           </p>
-          <div class="info-links">
+          <div class="about-links">
             <a href="https://www.linkedin.com/in/adamcfro/" target="_blank"
               ><i class="fa-brands fa-linkedin"></i
             ></a>
@@ -72,10 +79,17 @@
             <a href="mailto:adamcfro@gmail.com"
               ><i class="fa-solid fa-square-envelope"></i
             ></a>
+            <a href="adam-froehlich-resume.pdf"
+              ><i class="fa-solid fa-file-lines small-icon"></i
+            ></a>
           </div>
         </div>
         <div class="about-img">
-          <img src="img/adam-froehlich.jpg" alt="portrait" class="portrait" />
+          <img
+            src="img/adam-froehlich.jpg"
+            alt="portrait"
+            class="about-portrait"
+          />
         </div>
       </section>
 
@@ -92,15 +106,16 @@
           <li><i class="fa-brands fa-sass"></i><span>Sass</span></li>
         </ul>
         <p class="skills-info">
-          I love <span>building</span> stuff and learning new things. I started
-          tinkering with computers during my undergraduate degree in Philosophy
-          and have been playing with all sorts of technologies since. Recently,
-          I finished my Master's degree in Software Development as I continue to
-          <span>level up</span> my programming skills.
+          I have a passion for <span>creating</span> things and I enjoy a good
+          challenge. I started tinkering with computers during my undergraduate
+          degree in Philosophy and have been playing with all sorts of
+          technologies since. Recently, I finished my Master's degree in
+          Software Development as I continue to <span>level up</span> my
+          programming skills.
         </p>
         <aside class="education">
-          <h3 class="education-header">Education</h3>
-          <ul class="school-links">
+          <h2 class="education-header">Education</h2>
+          <ul class="education-links">
             <li>
               <i class="fa-solid fa-graduation-cap"></i
               ><span>Graduate Degree</span><span>Ohio State University</span>
@@ -114,10 +129,11 @@
       </section>
 
       <section id="projects-section" class="projects">
-        <h2 class="header projects-header">
-          Explore some of my recent projects!
+        <h2 class="projects-header">
+          Explore some of my recent
+          <span class="underline-highlight">&nbsp;projects!</span>
         </h2>
-        <div class="project project-1">
+        <div class="project-div project-1">
           <div class="project-img-div">
             <img
               src="img/magic-8-ball.png"
@@ -125,49 +141,53 @@
               class="project-img"
             />
           </div>
-          <div class="description">
+          <div class="project-title">
+            <span class="yellow-highlight">Magic 8 Ball</span>
+          </div>
+          <div class="project-description">
             <p>
-              Simulate all the mystery behind the
-              <span class="highlight-3">Magic 8 Ball's</span> esoteric
+              Simulate all the mystery behind the Magic 8 Ball's esoteric
               knowledge!
             </p>
           </div>
           <div class="project-links">
             <a
               href="https://magic-8-ball.adamfroehlich.com"
-              class="project-link"
+              class="project-button"
               target="_blank"
               >Demo</a
             >
             <a
               href="https://github.com/adamcfro/magic-8-ball"
-              class="project-link"
+              class="project-button"
               target="_blank"
               >GitHub</a
             >
           </div>
         </div>
-        <div class="project project-2">
+        <div class="project-div project-2">
           <div class="project-img-div">
             <img src="img/task-list.png" alt="project-2" class="project-img" />
           </div>
-          <div class="description">
+          <div class="project-title">
+            <span class="yellow-highlight">Task List</span>
+          </div>
+          <div class="project-description">
             <p>
               Keep track of everything you need to get done in this busy world
-              with this super-duper, handy-dandy
-              <span class="highlight-3">Task List!</span>
+              with this super-duper, handy-dandy Task List!
             </p>
           </div>
           <div class="project-links">
             <a
               href="https://task-list.adamfroehlich.com"
-              class="project-link"
+              class="project-button"
               target="_blank"
               >Demo</a
             >
             <a
               href="https://github.com/adamcfro/task-list"
-              class="project-link"
+              class="project-button"
               target="_blank"
               >GitHub</a
             >
@@ -176,20 +196,37 @@
       </section>
 
       <section id="contact-section" class="contact">
-        <h2 class="contact-me highlight-3">Contact Me</h2>
-        <div class="contact-info">
-          <i class="fa-brands fa-github"></i>
-          <a href="https://github.com/adamcfro" target="_blank">GitHub</a>
-          <i class="fa-brands fa-linkedin"></i>
-          <a href="https://www.linkedin.com/in/adamcfro/" target="_blank"
-            >LinkedIn</a
+        <h2 class="contact-me">
+          <span class="highlight-container"
+            ><span class="highlight-large">Contact Me</span></span
           >
-          <i class="fa-solid fa-square-envelope"></i
-          ><a href="mailto:adamcfro@gmail.com">Email</a>
+        </h2>
+        <div class="contact-info">
+          <a href="https://github.com/adamcfro" target="_blank"
+            ><i class="fa-brands fa-github"></i>GitHub</a
+          >
+
+          <a href="https://www.linkedin.com/in/adamcfro/" target="_blank"
+            ><i class="fa-brands fa-linkedin"></i>LinkedIn</a
+          >
+          <a href="mailto:adamcfro@gmail.com"
+            ><i class="fa-solid fa-square-envelope"></i>Email</a
+          >
+          <a href="adam-froehlich-resume.pdf" target="_blank"
+            ><i class="fa-regular fa-file-lines"></i>Resume</a
+          >
         </div>
-        <div class="get-in-touch">
-          <p class="">Get in Touch!</p>
+        <div class="contact-bottom">
+          <p class="pink-highlight">Get in Touch!</p>
         </div>
+        <footer class="footer">
+          <ul class="footer-links">
+            <li><a href="#about-section">About</a></li>
+            <li><a href="#skills-section">Skills</a></li>
+            <li><a href="#projects-section">Projects</a></li>
+            <li><a href="#contact-section">Contact</a></li>
+          </ul>
+        </footer>
       </section>
     </div>
   </body>
