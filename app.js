@@ -12,15 +12,59 @@ function toggleNav() {
 }
 
 /**
- * Removes scroll event listener and adds highlight animation to skills.
+ * Closes the nav menu when a nav link is clicked.
+ *
+ * @param {Event} e
  */
-function addHighlightToSkills() {
+function closeNav(e) {
+  if (e.target.classList.contains("header-link")) {
+    const hamburger = document.querySelector(".hamburger-icon");
+    const menu = document.querySelector(".menu-links");
+    hamburger.classList.remove("open");
+    menu.classList.remove("open");
+  }
+}
+
+/**
+ * Closes the nav menu when a click occurs outside the nav menu.
+ *
+ * @param {Event} e
+ */
+function closeNavOnFocusOut(e) {
+  const hamburger = document.querySelector(".hamburger-icon");
+  const menu = document.querySelector(".menu-links");
+  if (
+    menu.classList.contains("open") &&
+    !e.target.isEqualNode(hamburger) &&
+    !e.target.isEqualNode(menu) &&
+    !menu.contains(event.target)
+  ) {
+    hamburger.classList.remove("open");
+    menu.classList.remove("open");
+  }
+}
+
+/**
+ * Removes scroll event listener and adds highlight animation to first skill.
+ */
+function addFirstHighlightToSkills() {
   if (document.documentElement.scrollTop >= 600) {
-    document.removeEventListener("scroll", addHighlightToSkills);
-    const list = document.querySelectorAll(".skills-info span");
-    for (let i = 0; i < list.length; i++) {
-      list[i].classList.add("highlight-skills");
-    }
+    document.removeEventListener("scroll", addFirstHighlightToSkills);
+    document
+      .querySelector(".skills-info span:nth-child(1)")
+      .classList.add("highlight-skill-1");
+  }
+}
+
+/**
+ * Removes scroll event listener and adds highlight animation to second skill.
+ */
+function addSecondHighlightToSkills() {
+  if (document.documentElement.scrollTop >= 600) {
+    document.removeEventListener("scroll", addSecondHighlightToSkills);
+    document
+      .querySelector(".skills-info span:nth-child(2)")
+      .classList.add("highlight-skill-2");
   }
 }
 
@@ -61,7 +105,13 @@ function startApp() {
     .querySelector(".hamburger-icon")
     .addEventListener("click", toggleNav);
 
-  document.addEventListener("scroll", addHighlightToSkills);
+  document.addEventListener("click", closeNav);
+
+  document.addEventListener("click", closeNavOnFocusOut);
+
+  document.addEventListener("scroll", addFirstHighlightToSkills);
+
+  document.addEventListener("scroll", addSecondHighlightToSkills);
 
   window.addEventListener("scroll", addArrowToContactSection);
 }
