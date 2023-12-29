@@ -539,19 +539,12 @@ div a i:hover {
   grid-area: contact-info;
   display: flex;
   justify-content: center;
-  align-items: center;
   height: 5rem;
   width: 25rem;
   border: .1rem solid var(--blue);
   border-radius: 1.5rem;
   margin: 0 auto;
   gap: 2rem;
-}
-
-.contact-info a i{
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .contact-bottom {
@@ -567,7 +560,6 @@ div a i:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-shadow: ;
 }
 
 .arrow {
