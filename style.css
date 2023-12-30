@@ -53,8 +53,9 @@ a {
   transition: all 300ms ease;
 }
 
-a:hover,
-div a i:hover {
+.nav-links a:hover,
+.contact-info a:hover,
+.footer-links li a:hover {
   color: var(--orange);
   transition: all 300ms ease;
 }
@@ -131,6 +132,11 @@ div a i:hover {
   bottom: 0;
   z-index: -1;
   transform: rotate(-2deg);
+}
+
+.highlight-turqoise::before {
+  width: calc(100% + .1rem);
+  left: 0;
 }
 
 .highlight-underline::before {
@@ -334,9 +340,25 @@ div a i:hover {
   animation-delay: 2.5s;
 }
 
+.nav-links a,
 .about-links a i,
-.contact-info a span {
+.contact-info a span,
+.footer-links a {
   text-shadow: 0 .1rem .2rem rgb(0 0 0 / 0.2);
+}
+
+.about-button-1 {
+  border-radius: .5rem;
+  padding: 1rem;
+  box-shadow: 0 .1rem .4rem rgb(0 0 0 / 0.3);
+  color: var(--white);
+  background-color: var(--blue);
+}
+
+.about-button-2 {
+  border-radius: .5rem;
+  padding: 1rem;
+  box-shadow: 0 .1rem .4rem rgb(0 0 0 / 0.3);
 }
 
 @keyframes fadeIn {
@@ -494,11 +516,20 @@ div a i:hover {
   gap: 1rem;
 }
 
+.about-links a:hover,
 .project-links a:hover {
-  box-shadow: 0 .2rem .8rem rgb(0 0 0 / 0.2);
+  box-shadow: 0 .2rem .8rem rgb(0 0 0 / 0.4);
 }
 
-.project-button {
+.project-button-demo {
+  border-radius: .5rem;
+  padding: 1rem;
+  box-shadow: 0 .1rem .4rem rgb(0 0 0 / 0.3);
+  color: var(--white);
+  background-color: var(--blue);
+}
+
+.project-button-code {
   border-radius: .5rem;
   padding: 1rem;
   box-shadow: 0 .1rem .4rem rgb(0 0 0 / 0.3);
