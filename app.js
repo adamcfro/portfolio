@@ -47,11 +47,11 @@ function closeNavOnFocusOut(e) {
 /**
  * Removes scroll event listener and adds highlight animation to first skill.
  */
-function addFirstHighlightToSkills() {
+function addFirstHighlightToAbout() {
   if (document.documentElement.scrollTop >= 600) {
-    document.removeEventListener("scroll", addFirstHighlightToSkills);
+    document.removeEventListener("scroll", addFirstHighlightToAbout);
     document
-      .querySelector(".skills-info span:nth-child(1)")
+      .querySelector(".about-info span:nth-child(1)")
       .classList.add("highlight-skill-1");
   }
 }
@@ -59,11 +59,11 @@ function addFirstHighlightToSkills() {
 /**
  * Removes scroll event listener and adds highlight animation to second skill.
  */
-function addSecondHighlightToSkills() {
+function addSecondHighlightToAbout() {
   if (document.documentElement.scrollTop >= 600) {
-    document.removeEventListener("scroll", addSecondHighlightToSkills);
+    document.removeEventListener("scroll", addSecondHighlightToAbout);
     document
-      .querySelector(".skills-info span:nth-child(2)")
+      .querySelector(".about-info span:nth-child(2)")
       .classList.add("highlight-skill-2");
   }
 }
@@ -109,9 +109,9 @@ function startApp() {
 
   document.addEventListener("click", closeNavOnFocusOut);
 
-  document.addEventListener("scroll", addFirstHighlightToSkills);
+  document.addEventListener("scroll", addFirstHighlightToAbout);
 
-  document.addEventListener("scroll", addSecondHighlightToSkills);
+  document.addEventListener("scroll", addSecondHighlightToAbout);
 
   window.addEventListener("scroll", addArrowToContactSection);
 }
