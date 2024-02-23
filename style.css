@@ -1,15 +1,15 @@
+/** @format */
+
 :root {
   --blue: #002347;
-  --dark-gray: #D8D8D8;
-  --gray: #F6F6F6;
+  --dark-gray: #d8d8d8;
+  --gray: #f2f2f2;
   --green: #46b96c;
-  --orange: #EE6E37;
-  --pink: #FFC0CB;
+  --orange: #ee6e37;
+  --pink: #ffc0cb;
   --turqoise: #7efff5;
-  --white: #FBFBFB;
-  --yellow: #FFD500;
-  --linear-gradient-right: linear-gradient(to bottom right, var(--dark-gray), var(--white));
-  --linear-gradient-left: linear-gradient(to bottom left, var(--dark-gray), var(--white));
+  --white: #fbfbfb;
+  --yellow: #ffd500;
 }
 
 * {
@@ -24,7 +24,7 @@ html {
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   overscroll-behavior-y: none;
   color: var(--blue);
 }
@@ -82,15 +82,15 @@ a {
   display: block;
   height: 90%;
   width: 100%;
-  margin-left: -.1875rem;
-  margin-right: -.1875rem;
+  margin-left: -0.1875rem;
+  margin-right: -0.1875rem;
   position: absolute;
   background: var(--yellow);
   transform: rotate(2deg);
-  top: .0625rem;
-  left: -.0625rem;
+  top: 0.0625rem;
+  left: -0.0625rem;
   border-radius: 20% 25% 20% 24%;
-  padding: .625rem .1875rem .1875rem .625rem;
+  padding: 0.625rem 0.1875rem 0.1875rem 0.625rem;
 }
 
 .highlight-pink,
@@ -126,16 +126,20 @@ a {
 .highlight-underline::before {
   content: "";
   position: absolute;
-  width: calc(100% + .25rem);
+  width: calc(100% + 0.25rem);
   height: 60%;
-  left: -.125rem;
+  left: -0.125rem;
   bottom: 0;
   z-index: -1;
   transform: rotate(-2deg);
 }
 
+.highlight-green::before {
+  transform: rotate(-0.75deg);
+}
+
 .highlight-turqoise::before {
-  width: calc(100% + .1rem);
+  width: calc(100% + 0.1rem);
   left: 0;
 }
 
@@ -144,28 +148,36 @@ a {
 }
 
 .highlight-skill-1 {
-  animation: 1.5s highlightSkills 1.5s 1 normal forwards;
+  animation: 1.5s highlightAbout 1.5s 1 normal forwards;
   background-color: none;
-  background: linear-gradient(90deg, var(--green) 50%, rgba(255, 255, 255, 0) 50%);
+  background: linear-gradient(
+    90deg,
+    var(--green) 50%,
+    rgba(255, 255, 255, 0) 50%
+  );
   background-size: 200% 100%;
   background-position: 100% 0;
 }
 
 .highlight-skill-2 {
-  animation: 1.5s highlightSkills 3s 1 normal forwards;
+  animation: 1.5s highlightAbout 3s 1 normal forwards;
   background-color: none;
-  background: linear-gradient(90deg, var(--green) 50%, rgba(255, 255, 255, 0) 50%);
+  background: linear-gradient(
+    90deg,
+    var(--green) 50%,
+    rgba(255, 255, 255, 0) 50%
+  );
   background-size: 200% 100%;
   background-position: 100% 0;
 }
 
-@-webkit-keyframes highlightSkills {
+@-webkit-keyframes highlightAbout {
   to {
     background-position: 0 0;
   }
 }
 
-@keyframes highlightSkills {
+@keyframes highlightAbout {
   from {
     color: var(--blue);
   }
@@ -220,7 +232,7 @@ a {
 }
 
 .hamburger-icon span {
-  height: .125rem;
+  height: 0.125rem;
   width: 100%;
   background-color: var(--blue);
   transition: all 0.3 ease-in-out;
@@ -230,7 +242,7 @@ a {
   display: block;
   font-size: 1.5rem;
   text-align: center;
-  padding: .625rem;
+  padding: 0.625rem;
   color: var(--blue);
   text-decoration: none;
   transition: all 0.3 ease-in-out;
@@ -245,7 +257,7 @@ a {
 }
 
 .hamburger-icon.open span:first-child {
-  transform: rotate(45deg) translate(.625rem, .3215rem);
+  transform: rotate(45deg) translate(0.625rem, 0.3215rem);
 }
 
 .hamburger-icon.open span:nth-child(2) {
@@ -253,7 +265,7 @@ a {
 }
 
 .hamburger-icon.open span:last-child {
-  transform: rotate(-45deg) translate(.625rem, -.3125rem);
+  transform: rotate(-45deg) translate(0.625rem, -0.3125rem);
 }
 
 .hamburger-icon span:first-child {
@@ -280,7 +292,7 @@ a {
   transition: all 0.3 ease-in-out;
 }
 
-.about {
+.home {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 9fr;
@@ -292,30 +304,32 @@ a {
   height: 100svh;
   padding: 1rem;
   background-color: var(--white);
-  background: var(--linear-gradient-right);
 }
 
-.about-header {
+.home-header {
   font-size: 1.5rem;
   opacity: 0;
   animation: fadeIn 1.5s ease-in-out forwards;
-  animation-delay: .5s;
+  animation-delay: 0.5s;
 }
 
-.about-img {
+.home-img {
   grid-area: image;
   margin-left: 3rem;
 }
 
-.about-portrait {
+.home-portrait {
   height: 20rem;
   width: 20rem;
   border-radius: 10rem;
-  box-shadow: 0 .2rem .7rem rgb(0 0 0 / 0.2);
+  box-shadow: 0 0.2rem 0.7rem rgb(0 0 0 / 0.2);
   object-fit: cover;
+  opacity: 0;
+  animation: fadeIn 1.5s ease-in-out forwards;
+  animation-delay: 0.1s;
 }
 
-.about-info {
+.home-info {
   grid-area: info;
   display: flex;
   flex-direction: column;
@@ -323,14 +337,14 @@ a {
   gap: 2rem;
 }
 
-.about-info p {
+.home-info p {
   opacity: 0;
   animation: fadeIn 1.5s ease-in-out forwards;
   animation-delay: 1.5s;
   margin: 0 7rem;
 }
 
-.about-links {
+.home-links {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -340,25 +354,23 @@ a {
   animation-delay: 2.5s;
 }
 
-.nav-links a,
-.about-links a i,
-.contact-info a span,
-.footer-links a {
-  text-shadow: 0 .1rem .2rem rgb(0 0 0 / 0.2);
+.home-links a i,
+.contact-info a span {
+  text-shadow: 0 0.1rem 0.2rem rgb(0 0 0 / 0.2);
 }
 
-.about-button-1 {
-  border-radius: .5rem;
+.home-button-1 {
+  border-radius: 0.5rem;
   padding: 1rem;
-  box-shadow: 0 .1rem .4rem rgb(0 0 0 / 0.3);
+  box-shadow: 0 0.1rem 0.4rem rgb(0 0 0 / 0.3);
   color: var(--white);
   background-color: var(--blue);
 }
 
-.about-button-2 {
-  border-radius: .5rem;
+.home-button-2 {
+  border-radius: 0.5rem;
   padding: 1rem;
-  box-shadow: 0 .1rem .4rem rgb(0 0 0 / 0.3);
+  box-shadow: 0 0.1rem 0.4rem rgb(0 0 0 / 0.3);
 }
 
 @keyframes fadeIn {
@@ -367,53 +379,52 @@ a {
   }
 }
 
-.about-links a i {
+.home-links a i {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.skills {
+.about {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 2fr 4fr 3fr 3fr;
   grid-template-areas:
-    "skills-header"
-    "skills-list"
-    "skills-info"
+    "about-header"
+    "about-list"
+    "about-info"
     "education";
   height: 100svh;
   padding: 1rem;
   background-color: var(--gray);
-  background: var(--linear-gradient-left);
   position: relative;
 }
 
-.skills-header {
-  grid-area: skills-header;
+.about-header {
+  grid-area: about-header;
   display: flex;
   justify-content: center;
   align-items: end;
   font-size: 1.5rem;
 }
 
-.skills-list {
-  grid-area: skills-list;
+.about-list {
+  grid-area: about-list;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 2rem;
 }
 
-.skills-info {
-  grid-area: skills-info;
+.about-info {
+  grid-area: about-info;
   position: absolute;
   transform: translateY(-50%);
   top: 50%;
   margin: 0 20rem;
   animation-timing-function: ease-in-out;
   animation-direction: forwards;
-  animation-delay: .5s;
+  animation-delay: 0.5s;
   animation-duration: 1.5s;
 }
 
@@ -449,7 +460,6 @@ a {
   height: 100svh;
   padding: 1rem;
   background-color: var(--white);
-  background: var(--linear-gradient-right);
   overflow: hidden;
 }
 
@@ -471,8 +481,8 @@ a {
   height: 80%;
   width: 70%;
   margin: auto;
-  border-radius: .5rem;
-  box-shadow: 0 .2rem .7rem rgb(0 0 0 / 0.2);
+  border-radius: 0.5rem;
+  box-shadow: 0 0.2rem 0.7rem rgb(0 0 0 / 0.2);
   background-color: var(--gray);
   overflow: hidden;
 }
@@ -488,7 +498,7 @@ a {
   max-height: 100%;
   max-width: 30rem;
   object-fit: contain;
-  opacity: .7;
+  opacity: 0.7;
 }
 
 .project-title {
@@ -516,23 +526,23 @@ a {
   gap: 1rem;
 }
 
-.about-links a:hover,
+.home-links a:hover,
 .project-links a:hover {
-  box-shadow: 0 .2rem .8rem rgb(0 0 0 / 0.4);
+  box-shadow: 0 0.2rem 0.8rem rgb(0 0 0 / 0.4);
 }
 
 .project-button-demo {
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   padding: 1rem;
-  box-shadow: 0 .1rem .4rem rgb(0 0 0 / 0.3);
+  box-shadow: 0 0.1rem 0.4rem rgb(0 0 0 / 0.3);
   color: var(--white);
   background-color: var(--blue);
 }
 
 .project-button-code {
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   padding: 1rem;
-  box-shadow: 0 .1rem .4rem rgb(0 0 0 / 0.3);
+  box-shadow: 0 0.1rem 0.4rem rgb(0 0 0 / 0.3);
 }
 
 .project-1 {
@@ -556,7 +566,6 @@ a {
   padding: 1rem;
   gap: 1rem;
   background-color: var(--gray);
-  background: var(--linear-gradient-left);
 }
 
 .contact-me {
@@ -572,7 +581,7 @@ a {
   justify-content: center;
   height: 5rem;
   width: 25rem;
-  border: .1rem solid var(--blue);
+  border: 0.1rem solid var(--blue);
   border-radius: 1.5rem;
   margin: 0 auto;
   gap: 2rem;
@@ -612,4 +621,5 @@ a {
   gap: 5rem;
   font-size: 1.25rem;
   justify-content: center;
+  text-shadow: 0 0.05rem 0.1rem rgb(0 0 0 / 0.2);
 }
